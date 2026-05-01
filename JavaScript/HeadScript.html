@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS in Head</title>
+
+    <script>
+        alert("Hello World from HEAD!");
+
+        function showMessage() {
+            document.getElementById("demo").innerHTML = "Message changed from HEAD script!";
+        }
+    </script>
+
+</head>
+<body>
+
+<h1>My Web Page</h1>
+<p id="demo">Original Paragraph</p>
+
+<button onclick="showMessage()">Click Me</button>
+
+</body>
+</html>

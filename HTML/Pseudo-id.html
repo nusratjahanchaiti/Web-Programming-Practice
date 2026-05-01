@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+#A1,#B1{
+padding: 20px;
+margin: 20px; 
+color:bisque;
+}  
+#A1 {
+  background-color: rgb(230, 173, 207);
+}
+#B1 {
+  background-color: rgb(154, 11, 54);
+}
+/* Pseudo-class */
+#A1:hover { 
+  background-color: rgb(128, 70, 0); 
+}
+#B1:hover { 
+  background-color: rgb(128, 119, 0); 
+}
+#A1::before {
+  content: "Hello ";
+  color: red;
+}
+#A1::after{
+  content: " from NJC";
+  color: powderblue;
+}
+</style>
+</head>
+<body>
+
+<div id="A1">World</div>
+<div id="B1">Happy Valentine's day</div>
+
+</body>
+</html>

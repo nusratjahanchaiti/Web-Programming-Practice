@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Input</title>
+</head>
+<body>
+
+<h2>User Input Example</h2>
+
+<button onclick="usePrompt()">Prompt</button>
+<button onclick="useConfirm()">Confirm</button>
+
+<br><br>
+
+<input type="text" id="userInput" placeholder="Enter something">
+<button onclick="getInput()">Submit</button>
+
+<script>
+
+function usePrompt() {
+    let name = prompt("Enter your name:");
+    console.log("Hello " + name);
+}
+
+function useConfirm() {
+    let result = confirm("Are you 18+?");
+    console.log("Confirm result:", result);
+}
+
+function getInput() {
+    let value = document.getElementById("userInput").value;
+    console.log("Input field value:", value);
+}
+
+</script>
+
+</body>
+</html>

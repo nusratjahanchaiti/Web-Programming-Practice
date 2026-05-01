@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Students Details</h2>
+
+<script>
+
+// Array of 2 student objects
+const students = [
+    {
+        id: 101,
+        name: "Rohim",
+        age: 22,
+        address: { city: "Dhaka", country: "Bangladesh" },
+        subjects: [
+            { name: "Math", grade: "A" },
+            { name: "English", grade: "A" }
+        ]
+    },
+    {
+        id: 102,
+        name: "Karim",
+        age: 23,
+        address: { city: "Chittagong", country: "Bangladesh" },
+        subjects: [
+            { name: "Math", grade: "B" },
+            { name: "English", grade: "A+" }
+        ]
+    }
+];
+
+// Loop through each student
+for (let student of students) {
+    console.log("Student: " + student.name);
+    console.log("ID:", student.id);
+    console.log("Age:", student.age);
+    console.log("City:", student.address.city);
+    console.log("Country:", student.address.country);
+
+    console.log("Subjects:");
+    for (let sub of student.subjects) {
+        console.log(sub.name , ":", sub.grade);
+    }
+    console.log(""); // blank line between students
+}
+
+/* 
+for (let i in students) {
+    console.log(students[i].name);
+}
+*/
+</script>
+
+</body>
+</html>

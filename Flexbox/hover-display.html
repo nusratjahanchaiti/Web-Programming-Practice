@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hover Display Example</title>
+<style>
+#myDiv {
+  background-color: rgb(175,200,156);
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  cursor: pointer;
+}
+#myDiv p {
+  display: none;
+  margin: 5px 0;
+}
+#myDiv:hover p {
+  display: block;
+}
+</style>
+</head>
+<body>
+
+<div id="myDiv">
+  Hover me
+  <p style="color: yellow;">Successful</p>
+  <p style="color: green;">Congratulation</p>
+</div>
+
+</body>
+</html>

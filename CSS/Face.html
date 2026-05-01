@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.face {
+  height: 200px;
+  width: 200px;
+  background-color: blue;
+  border: 1px solid black;
+  position: relative;
+  border-radius: 20px;
+  margin: 50px;
+}
+
+.eye {
+  height: 40px;
+  width: 40px;
+  background-color: black;
+  position: absolute;
+  border-radius: 50%;
+  top: 40px;
+}
+
+.left {
+  left:30px;
+}
+
+.right {
+  right:30px;
+}
+
+.mouth {
+  height:40px;
+  width:120px;
+  background-color: transparent;
+  border: 5px solid red;
+  border-radius: 20px;
+  position:absolute;
+  bottom:30px;
+  left:40px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="face">
+  <div class="eye left"></div>
+  <div class="eye right"></div>
+  <div class="mouth"></div>
+</div>
+
+<script>
+const eyes= document.querySelectorAll(".eye");
+const mouth= document.querySelector(".mouth");
+const face= document.querySelector(".face");
+
+let clickCount=0;
+
+document.addEventListener("click",() => {
+clickCount++;
+
+ if (clickCount === 1) {
+eyes.forEach(eye =>eye.style.backgroundColor = "green");
+}
+
+else if (clickCount === 2) {
+  mouth.style.height ="0px";
+  mouth.style.borderTop ="5px solid red";
+  mouth.style.borderBottom = "none";
+ }
+
+else if (clickCount === 3){
+ face.style.transform ="scale(0.5)";
+  }
+}
+);
+</script>
+
+</body>
+</html>

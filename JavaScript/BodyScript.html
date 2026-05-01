@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS in Body</title>
+</head>
+<body>
+
+<h1>My Web Page</h1>
+<p id="demo">Original Paragraph</p>
+
+<button onclick="changeText()">Click Me</button>
+
+<script>
+    alert("Hello World from BODY!");
+
+    function changeText() {
+        document.getElementById("demo").innerHTML = "Text changed from BODY script!";
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* Base style for all boxes */
+.box {
+  padding: 20px;
+  margin: 10px;
+  border: 2px solid black;
+  background-color: lightblue;
+  color: black;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* :hover - when mouse is over */
+.box:hover {
+  background-color: tomato;
+  color: white;
+}
+
+/* :focus - when element is focused (click or tab) */
+.box:focus {
+  outline: 3px dashed green;
+  background-color: lightgreen;
+}
+
+/* :active - when element is being clicked */
+.box:active {
+  transform: scale(0.95);
+  background-color: orange;
+}
+
+/* :first-child - targets the first box inside container */
+.container .box:first-child {
+  border-color: red;
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+
+<h2>Pseudo-Class Selector Demo</h2>
+
+<div class="container">
+  <div class="box" tabindex="0">First Box (first-child)</div>
+  <div class="box" tabindex="0">Second Box</div>
+  <div class="box" tabindex="0">Third Box</div>
+</div>
+
+<p>Try hovering, clicking, or tabbing through the boxes to see pseudo-classes in action!</p>
+
+</body>
+</html>

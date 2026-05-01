@@ -1,0 +1,43 @@
+<!ELEMENT CompanyList (Company*)>
+
+<!ELEMENT Company (Company_name, Company_url?, Contact, Job_vacancy*)>
+<!ATTLIST Company CODE CDATA #REQUIRED>
+
+<!ELEMENT Company_name (#PCDATA)>
+
+<!ELEMENT Company_url EMPTY>
+<!ATTLIST Company_url page CDATA #REQUIRED>
+
+<!ELEMENT Contact (Contact_name, Contact_phone, Contact_email)>
+
+<!ELEMENT Contact_name (#PCDATA)>
+<!ELEMENT Contact_phone (#PCDATA)>
+<!ELEMENT Contact_email (#PCDATA)>
+
+<!ELEMENT Job_vacancy (Job_title, Job_description, Job_location, Job_salary, Start_date)>
+
+<!ELEMENT Job_title (#PCDATA)>
+<!ELEMENT Job_description (#PCDATA)>
+<!ELEMENT Job_location (#PCDATA)>
+<!ELEMENT Job_salary (#PCDATA)>
+<!ELEMENT Start_date (#PCDATA)>
+
+
+<!------ 
+
+Write an external DTD, company.dtd for the following XML 
+file specification: 
+a)CompanyList is a container of Company elements. 
+b)The CODE attribute in Company is mandatory.
+c)Company_url is optional. 
+d)Company_url must have a page attribute. 
+e)For each Company, one Company_name, Company_url, 
+Contact_name and zero or more Job_vacancy element must 
+be present.
+f)For each Contact, there must be a Contact_name, 
+Contact_phone, Contact_email. 
+g)For each Job_vacancy, exactly one Job_title, 
+Job_description, Job_location, Job_salary and Start_date 
+must be present  
+
+------>  

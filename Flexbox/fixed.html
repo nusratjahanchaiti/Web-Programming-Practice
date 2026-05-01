@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fixed Positioning</title>
+<style>
+#box2 {
+  position: fixed;
+  top: 20px;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background: red;
+  color: white;
+  text-align: center;
+}
+.box {
+  height: 120px;
+  margin: 10px 0;
+  background: lightblue;
+  text-align: center;
+  line-height: 120px;
+}
+</style>
+</head>
+<body>
+
+<div class="box">Box 1</div>
+<div id="box2">Box 2 (Fixed)</div>
+<div class="box" style="background: lightgreen;">Box 3</div>
+
+</body>
+</html>

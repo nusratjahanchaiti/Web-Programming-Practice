@@ -1,0 +1,129 @@
+<!DOCTYPE html> <!-- Defines HTML5 document -->
+<html>
+<head>
+    <title>Web Programming Using DIV</title>
+
+    <!-- Internal CSS for styling div sections -->
+    <style>
+        .container {
+            width: 80%; /* Sets page width */
+            margin: auto; /* Centers content */
+        }
+
+        .header {
+            background-color: lightblue; /* Header background */
+            padding: 10px;
+            text-align: center;
+        }
+
+        .content {
+            background-color: #f2f2f2; /* Content background */
+            padding: 15px;
+        }
+
+        .highlight {
+            background-color: yellow; /* Highlight text */
+        }
+
+        .list-style {
+            color: darkgreen; /* List text color */
+        }
+
+        .footer {
+            background-color: lightgray;
+            text-align: center;
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Main container div -->
+    <div class="container">
+
+        <!-- Header section -->
+        <div class="header">
+            <h1>Introduction to Web Programming</h1>
+        </div>
+
+        <!-- Content section -->
+        <div class="content">
+
+            <!-- Paragraph with text formatting -->
+            <p>
+                This is a <b>simple HTML practice page</b> <!-- Bold -->
+                using <strong>DIV element</strong>. <!-- Important -->
+                <br> <!-- Line break -->
+                HTML is used to <i>create web pages</i> <!-- Italic -->
+                and <em>organize content</em>. <!-- Emphasized -->
+            </p>
+
+            <!-- Underlined and highlighted text -->
+            <p class="highlight">
+                <u>DIV tag</u> is used to group HTML elements.
+            </p>
+
+            <!-- Small text -->
+            <small>
+                This example covers basic HTML syllabus topics.
+            </small>
+
+            <hr> <!-- Horizontal line -->
+
+            <!-- Image section -->
+            <h2>Image Example</h2>
+            <img src="web.png" alt="Web Programming Image" width="200">
+            <!-- src = image path, alt = image description -->
+
+            <hr>
+
+            <!-- Link section -->
+            <h2>Link Example</h2>
+            <a href="https://www.w3schools.com" target="_blank">
+                Learn HTML from W3Schools
+            </a>
+            <!-- target="_blank" opens link in new tab -->
+
+            <hr>
+
+            <!-- Unordered List -->
+            <h2>Unordered List</h2>
+            <ul class="list-style">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+
+            <!-- Ordered List -->
+            <h2>Ordered List</h2>
+            <ol class="list-style">
+                <li>Study HTML</li>
+                <li>Practice CSS</li>
+                <li>Learn JavaScript</li>
+            </ol>
+
+            <!-- Description List -->
+            <h2>Description List</h2>
+            <dl class="list-style">
+                <dt>HTML</dt>
+                <dd>Structures web content</dd>
+
+                <dt>CSS</dt>
+                <dd>Styles web pages</dd>
+
+                <dt>JavaScript</dt>
+                <dd>Adds interactivity</dd>
+            </dl>
+
+        </div> <!-- End of content div -->
+
+        <!-- Footer section -->
+        <div class="footer">
+            <p>© 2026 Web Programming Practice</p>
+        </div>
+
+    </div> <!-- End of container div -->
+
+</body>
+</html>

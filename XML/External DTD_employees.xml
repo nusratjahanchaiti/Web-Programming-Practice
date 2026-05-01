@@ -1,0 +1,23 @@
+<!DOCTYPE employees SYSTEM "employees.dtd">
+
+<employees>
+
+  <employee>
+    <empid>101</empid>
+    <name>Ali</name>
+    <salary>50000</salary>
+    <dept>IT</dept>
+    <phone>01711111111</phone>
+    <email>ali@mail.com</email>
+  </employee>
+
+  <employee>
+    <empid>102</empid>
+    <name>Sara</name>
+    <salary>60000</salary>
+    <dept>HR</dept>
+    <phone>01822222222</phone>
+    <email>sara@mail.com</email>
+  </employee>
+
+</employees>

@@ -1,0 +1,45 @@
+<persons>
+
+  <person>
+      <name> John </name>
+      <phone> 3634 </phone>
+
+      <order>
+          <date> 2002 </date>
+          <product> Gizmo </product>
+      </order>
+
+      <order>
+          <date> 2004 </date>
+          <product> Gadget </product>
+      </order>
+  </person>
+
+  <person>
+      <name> Sue </name>
+      <phone> 6343 </phone>
+
+      <order>
+          <date> 2004 </date>
+          <product> Gadget </product>
+      </order>
+  </person>
+
+</persons>
+
+<!--
+PERSON TABLE
+
+| name | phone |
+|------|------|
+| John | 3634  |
+| Sue  | 6343  |
+
+ORDER TABLE
+
+| name | date | product |
+|------|------|--------|
+| John | 2002 | Gizmo  |
+| John | 2004 | Gadget |
+| Sue  | 2004 | Gadget |
+-->

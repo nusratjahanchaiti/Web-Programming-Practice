@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS All Selector Practice</title>
+
+<style>
+
+/* Universal Selector */
+* {
+    font-family: Arial;
+}
+
+/* Element Selector */
+h1 {
+    color: blue;
+    text-align: center;
+}
+
+/* ID Selector */
+#special {
+    color: red;
+    font-weight: bold;
+}
+
+/* Class Selector */
+.box {
+    width: 300px;
+    height: 150px;
+    background-color: lightblue;
+    border: 3px solid black;
+    margin: 20px;       /* space outside */
+    padding: 20px;      /* space inside */
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Group Selector */
+h2, h3 {
+    background-color: lightgray;
+}
+
+/* Descendant Selector */
+div p {
+    color: green;
+}
+
+/* Child Selector */
+div > h4 {
+    color: purple;
+}
+
+/* Attribute Selector */
+input[type="text"] {
+    border: 2px solid blue;
+    padding: 5px;
+}
+
+/* Pseudo-class */
+button:hover {
+    background-color: yellow;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>CSS Full Practice Example</h1>
+
+<p id="special">This is ID selector example</p>
+
+<div class="box">
+    This box shows margin, padding and border.
+</div>
+
+<h2>Group Selector Example</h2>
+<h3>Group Selector Example</h3>
+
+<div>
+    <p>Descendant selector paragraph</p>
+    <h4>Child selector heading</h4>
+</div>
+
+<br>
+
+<input type="text" placeholder="Enter name">
+<br><br>
+
+<button>Hover Over Me</button>
+
+</body>
+</html>

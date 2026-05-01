@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Array Example using for..of</h2>
+<p id="output"></p>
+
+<script>
+const colors = ["Red", "Green", "Blue"];
+let text = "";
+
+for (let color of colors) {
+    text += color + "<br>";
+}
+
+document.getElementById("output").innerHTML = text;
+
+/* 
+const colors = ["Red", "Green", "Blue"];
+for (let color of colors) {
+    console.log(color); // print each color in console
+}
+*/
+</script>
+
+</body>
+</html>

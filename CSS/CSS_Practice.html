@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Cheat Sheet Example</title>
+
+<!-- Internal CSS -->
+<style>
+/* =======================
+   CSS Background
+======================= */
+body {
+    /* Background color */
+    background-color: #b0c4de;  
+
+    /* Background image shorthand */
+    background: url('https://via.placeholder.com/150') no-repeat right top;
+
+    /* Background properties individually */
+    /* background-image: url('https://via.placeholder.com/150'); */
+    /* background-repeat: no-repeat; */
+    /* background-position: right top; */
+    /* background-attachment: fixed; */
+}
+
+/* =======================
+   CSS Selectors
+======================= */
+/* Single element */
+h1 {
+    color: darkblue;
+    font-family: "Arial", sans-serif;
+    text-align: center;
+}
+
+/* Grouping elements */
+h2, h3 {
+    font-family: "Verdana", sans-serif;
+    color: #333;
+}
+
+/* Class selector */
+.intro {
+    font-size: 1.2em;
+    font-style: italic;
+    margin: 10px 0;
+}
+
+/* ID selector */
+#unique {
+    border-bottom: 2px dashed #ff0000;
+    padding-bottom: 5px;
+}
+
+/* Advanced selectors */
+p span {
+    color: red; /* descendant */
+}
+div > p {
+    font-weight: bold; /* child */
+}
+* {
+    box-sizing: border-box; /* universal */
+}
+
+/* =======================
+   CSS Fonts
+======================= */
+.serif-text {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    font-style: normal;
+    font-variant: small-caps;
+}
+
+/* =======================
+   CSS Text
+======================= */
+.text-color {
+    color: green;
+}
+.text-decoration {
+    text-decoration: underline overline;
+}
+.text-indent {
+    text-indent: 30px;
+}
+.text-align {
+    text-align: justify;
+}
+.text-transform {
+    text-transform: capitalize;
+}
+.white-space {
+    white-space: nowrap;
+}
+.word-spacing {
+    word-spacing: 10px;
+}
+.letter-spacing {
+    letter-spacing: 2px;
+}
+
+/* =======================
+   Responsive Font
+======================= */
+html {
+    font-size: 16px; /* Base font size */
+}
+p {
+    font-size: 1rem; /* 16px */
+}
+@media (max-width: 600px) {
+    html {
+        font-size: 14px;
+    }
+}
+</style>
+</head>
+
+<body>
+    <!-- Background Example -->
+    <h1>CSS Cheat Sheet Example</h1>
+
+    <!-- Inline CSS Example -->
+    <h2 style="color: purple; font-size: 20px;">Inline CSS Example</h2>
+
+    <!-- Internal/External CSS -->
+    <h3>Internal CSS Example</h3>
+
+    <!-- Class Example -->
+    <p class="intro serif-text">This paragraph uses class selectors with serif font, italic style, and small-caps variant.</p>
+
+    <!-- ID Example -->
+    <p id="unique">This paragraph uses an ID selector with a bottom dashed border.</p>
+
+    <!-- Text Properties -->
+    <p class="text-color">This text is green.</p>
+    <p class="text-decoration">This text has underline and overline.</p>
+    <p class="text-indent">This paragraph is indented by 30px.</p>
+    <p class="text-align">This paragraph is justified. Each line stretches to fit the container width.</p>
+    <p class="text-transform">this sentence will be capitalized automatically.</p>
+    <p class="white-space">This text will not wrap and keeps all content in a single line even if it's long.</p>
+    <p class="word-spacing">This text has extra space between words.</p>
+    <p class="letter-spacing">This text has extra spacing between letters.</p>
+
+    <!-- Background Image Example -->
+    <div style="background:url('https://via.placeholder.com/300') repeat-x; height:150px; margin-top:20px;">
+        <p>Background image repeated horizontally.</p>
+    </div>
+
+    <!-- Responsive Text -->
+    <p>Resize the browser to see responsive font size change.</p>
+</body>
+</html>

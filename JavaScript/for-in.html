@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>3 Persons Details</h2>
+
+<script>
+// Array of 3 person objects
+const persons = [
+    {name:"John", age:25, city:"London"},
+    {name:"Sara", age:22, city:"New York"},
+    {name:"Mike", age:30, city:"Germany"}
+];
+
+// Loop through each person
+for (let i in persons) {
+    const person = persons[i]; // single 'person' object in each loop
+    console.log("Name:", person.name);
+    console.log("Age:", person.age);
+    console.log("City:", person.city);
+    console.log(""); // prints an empty line
+    
+}
+
+/* Without using Loop
+
+// Create 3 separate objects
+const person1 = {name:"John", age:25, city:"Dhaka"};
+const person2 = {name:"Sara", age:22, city:"Chittagong"};
+const person3 = {name:"Mike", age:30, city:"Khulna"};
+
+let text = "";
+
+// Person 1
+text += "<b>Person 1</b><br>";
+text += "Name: " + person1.name + "<br>";
+text += "Age: " + person1.age + "<br>";
+text += "City: " + person1.city + "<br><br>";
+
+// Person 2
+text += "<b>Person 2</b><br>";
+text += "Name: " + person2.name + "<br>";
+text += "Age: " + person2.age + "<br>";
+text += "City: " + person2.city + "<br><br>";
+
+// Person 3
+text += "<b>Person 3</b><br>";
+text += "Name: " + person3.name + "<br>";
+text += "Age: " + person3.age + "<br>";
+text += "City: " + person3.city + "<br>";
+
+document.getElementById("output").innerHTML = text;
+*/
+
+</script>
+
+</body>
+</html>

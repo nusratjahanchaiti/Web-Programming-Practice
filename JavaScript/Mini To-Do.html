@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To-Do App</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        ul#taskList {
+            margin-top: 10px;
+            padding-left: 0;
+            list-style: none; /* Remove default bullets */
+        }
+
+        li {
+            margin: 10px;
+        }
+
+        button {
+            margin-left: 5px;
+            padding: 5px 10px;
+            border: 2px solid black;
+            cursor: pointer;
+        }
+
+        .doneButton {
+            background-color: green;
+            color: white;
+        }
+
+        .editButton {
+            background-color: yellow;
+        }
+
+        .deleteButton {
+            background-color: red;
+            color: white;
+        }
+
+        .completed {
+            text-decoration: line-through;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+
+<h2>To-Do App </h2>
+
+<input type="text" id="taskInput" placeholder="Enter task">
+<button onclick="addTask()">Add Task</button>
+
+<ul id="taskList"></ul>
+
+<script>
+
+function addTask() {
+    var taskInputElement = document.getElementById("taskInput");
+    var taskText = taskInputElement.value.trim();
+
+    if (taskText === "") {
+        alert("Please enter a task");
+        return;
+    }
+
+    // Create list item
+    var listItemElement = document.createElement("li");
+
+    // ✅ Add order number dynamically
+    listItemElement.innerText = (document.getElementById("taskList").children.length + 1) + ". " + taskText;
+
+    // DONE button
+    var doneButton = document.createElement("button");
+    doneButton.innerText = "Done";
+    doneButton.className = "doneButton";
+    doneButton.onclick = function() {
+        listItemElement.classList.toggle("completed");
+    };
+
+    // EDIT button
+    var editButton = document.createElement("button");
+    editButton.innerText = "Edit";
+    editButton.className = "editButton";
+    editButton.onclick = function() {
+        var newTask = prompt("Edit task:", taskText);
+        if (newTask !== null && newTask.trim() !== "") {
+            taskText = newTask.trim();
+            updateTaskNumbers();
+        }
+    };
+
+    // DELETE button
+    var deleteButton = document.createElement("button");
+    deleteButton.innerText = "Delete";
+    deleteButton.className = "deleteButton";
+    deleteButton.onclick = function() {
+        listItemElement.remove();
+        updateTaskNumbers(); // Re-number after deletion
+    };
+
+    listItemElement.appendChild(doneButton);
+    listItemElement.appendChild(editButton);
+    listItemElement.appendChild(deleteButton);
+
+    document.getElementById("taskList").appendChild(listItemElement);
+    taskInputElement.value = "";
+}
+
+// Function to update task numbers dynamically
+function updateTaskNumbers() {
+    var taskList = document.getElementById("taskList");
+    for (var i = 0; i < taskList.children.length; i++) {
+        var li = taskList.children[i];
+
+        // Remove old number and keep only task text (remove button texts too)
+        var buttons = li.querySelectorAll("button");
+        var taskText = li.firstChild.nodeValue.split(". ").slice(1).join(". "); // remove old number
+        li.firstChild.nodeValue = (i + 1) + ". " + taskText;
+
+        // Re-append buttons (already there, just ensure text remains correct)
+        buttons.forEach(btn => li.appendChild(btn));
+    }
+}
+
+</script>
+
+</body>
+</html>

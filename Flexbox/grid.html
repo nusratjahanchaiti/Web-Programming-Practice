@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Daza Shop Grid Layout</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main grid container */
+.container {
+  display: grid;
+  grid-template-rows: auto repeat(2, 150px); /* first row auto height, next 2 rows 150px each */
+  grid-template-columns: 1fr 2fr 1fr; /* 3 columns for rows 2 & 3 */
+  gap: 10px;
+  padding: 20px;
+}
+
+/* Header spans all columns */
+.header {
+  grid-column: 1 / 4; /* span 3 columns */
+  background-color: lightgreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+/* Items in rows 2 and 3 */
+.item {
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  border: 1px solid black;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <!-- First row: Header -->
+  <div class="header">Daraz Shop</div>
+  
+  <!-- Second row: 3 columns -->
+  <div class="item">Item 1</div>
+  <div class="item">Item 2</div>
+  <div class="item">Item 3</div>
+
+  <!-- Third row: 3 columns -->
+  <div class="item">Item 4</div>
+  <div class="item">Item 5</div>
+  <div class="item">Item 6</div>
+</div>
+
+</body>
+</html>

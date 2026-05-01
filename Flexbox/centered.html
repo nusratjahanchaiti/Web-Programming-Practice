@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Perfect Centering</title>
+<style>
+#outer-box {
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+  position: relative;
+  margin: 50px auto;
+}
+#inner-box {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  line-height: 100px;
+  border: 2px solid black;
+}
+</style>
+</head>
+<body>
+
+<div id="outer-box">
+  <div id="inner-box">Centered</div>
+</div>
+
+</body>
+</html>
